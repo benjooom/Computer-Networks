@@ -1,0 +1,7 @@
+1. The biggest challenges I faced were first understanding how the iterative and recursive servers work. I found it particularly confusing to conceptualize how recursive DNS queries to other recursive DNS servers would work, but I ended up resolving that. Additionally, I also found it challenging to make sure that I was record keeping everything in an organized way. Since the DNS systems might encounter multiple requests of the same domain from different clients or different domains from different/the same clients, I had to figure out a way to manage the return addresses for each packet. Finally, it took me a little while to figure out how to refer to each packet when I was storing metadata about them, but I ended up using 'id(packet.request)' as the key to its data.
+
+2. A feature that would improve the DNS name servers would be having a hosts file for all of the clients. This would allow us to store significant amounts of cache data about domain to IP mappings directly in the client. If the client wanted to find a domain's IP that it has recently visited, it likely could find it in its hosts file. This would eliminate the need for a DNS search query at all.
+
+3. My code does employs DNS caching. The most important consideration that needed to be taken into account was maintaining up to date information correctly. This would mean cleaning the cache regularly, calculating correct dns_ttl values, and also searching cache records correctly.
+
+4. 30 hours
